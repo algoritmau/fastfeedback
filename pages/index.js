@@ -15,10 +15,14 @@ const Home = () => {
 
       <main className={styles.main}>
         <h1 className={styles.title}>Fast Feedback</h1>
-        <p className={styles.description}>Get Feedback... Fast</p>
-        <button onClick={() => auth.signInWithGithub()}>Sign In</button>
-        <div>{auth?.user?.email}</div>
-        {auth?.user && <button onClick={() => auth.signout()}>Sign Out</button>}
+        <p className={styles.description}>
+          Current user: <code>{auth.user ? auth.user.email : 'None'}</code>
+        </p>
+        {auth.user ? (
+          <button onClick={() => auth.signout()}>Sign Out</button>
+        ) : (
+          <button onClick={() => auth.signInWithGithub()}>Sign In</button>
+        )}
       </main>
 
       <footer className={styles.footer}>
