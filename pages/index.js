@@ -6,8 +6,6 @@ import { useAuth } from '../lib/auth';
 const Home = () => {
   const auth = useAuth();
 
-  // Get signIn method form useAuth
-
   return (
     <div className={styles.container}>
       <Head>
