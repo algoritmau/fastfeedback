@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <div>
       <main>
-        <Heading as='h1' size='2xl'>
+        <Heading as='h1' size='xl'>
           Fast Feedback
         </Heading>
         <Text fontSize='md'>
